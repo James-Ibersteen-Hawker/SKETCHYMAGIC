@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Whoa";
+    src: url("whoa!.ttf");
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    --head-height: 100px;
+    --dark-grey: rgba(20, 20, 20, 0.653);
+    --borders: 5px double gray;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, var(--dark-grey), var(--dark-grey)), url("grunge1.avif");
+    background-size: 600px 600px;
+}
+header {
+    height: var(--head-height);
+    width: 100%;
+    background: rgba(26, 26, 26, 0.8);
+    border-bottom: var(--borders);
+    font-family: "Whoa", sans-serif;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 0px 0px 10px red;
+}
+main {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    max-width: 1200px;
+    border-right: var(--borders);
+    border-left: var(--borders);
+    background: rgba(67, 67, 67, 0.8);
+    height: calc(100vh - var(--head-height));
+}
