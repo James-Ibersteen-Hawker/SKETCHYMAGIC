@@ -29,6 +29,7 @@ header {
     font-size: 70px;
     text-align: center;
     text-shadow: 0px 0px 10px red;
+    -webkit-text-stroke: 3px black;
 }
 main {
     margin-right: auto;
@@ -164,4 +165,13 @@ img[src=""] {
 }
 .hide {
     display: none;
+}
+.modal-body {
+    font-size: 40px;
+}
+.modal-body span {
+    color: red;
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: underline;
 }
