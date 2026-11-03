@@ -162,3 +162,6 @@ img[src=""] {
     transform: scale(150%);
     transform-origin: top left;
 }
+.hide {
+    display: none;
+}
