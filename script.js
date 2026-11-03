@@ -16,6 +16,11 @@ const items = [
     "The definitive guide to magic pranks that are sure to scare everybody away!",
     ["Bad ideas", "Negative consequences", "Getting scammed by this website"]
   ],
+  [
+    "",
+    "Face Mask",
+    "A face mask to obscure one's visage in order to appear deadest"
+  ]
 ]
 const container = document.querySelector("#card_container");
 function addCards() {
