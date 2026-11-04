@@ -6,6 +6,12 @@ const items = [
     ["Slowed breathing", "Pale face", "Cold skin", "Increased probability of being buried alive"]
   ],
   [
+    "facemask.webp",
+    "Face Mask",
+    "A face mask to obscure one's visage in order to appear deadest",
+    ["Increased risk of loss of recognition", "Increased probability of being buried alive", "Skin dehydration"]
+  ],
+  [
     "",
     "Body Bag",
     "A sleeping bag to mask your body while you play dead from the Prank Death Pills."
@@ -16,11 +22,6 @@ const items = [
     "The definitive guide to magic pranks that are sure to scare everybody away!",
     ["Bad ideas", "Negative consequences", "Getting scammed by this website"]
   ],
-  [
-    "",
-    "Face Mask",
-    "A face mask to obscure one's visage in order to appear deadest"
-  ]
 ]
 const container = document.querySelector("#card_container");
 function addCards() {
@@ -29,6 +30,14 @@ function addCards() {
     const list = current?.[3];
     const hide = !list ? "hide" : "";
     const modalID = current[1].split(" ").join("");
+    let effectsList = "";
+    if (list) {
+      effectsList += "<ul>"
+      for (let q = 0; q < list.length; q++) {
+        effectsList += `<li>${list[q]}</li>`
+      }
+      effectsList += "</ul>"
+    }
     const card = `<div class="_card">
         <div class="_card-image">
           <img src="${current[0]}" />
@@ -41,12 +50,7 @@ function addCards() {
           <div class="mini-hr"></div>
           <div class="_card-extras ${hide}">
             Side Effects
-            <ul>
-              <li>Slowed breathing</li>
-              <li>Pale face</li>
-              <li>Cold skin</li>
-              <li>Increased probability of being buried alive</li>
-            </ul>
+            ${effectsList}
           </div>
           <div class="mini-hr ${hide}"></div>
           <div class="_card-footer">
